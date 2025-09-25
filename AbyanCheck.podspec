@@ -17,7 +17,7 @@ s.homepage         = 'https://github.com/SedraPay/Abyan-T-iOS'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 
 s.author           = { 'mob@sedrapay.com' => 'mob@sedrapay.com' }
-s.source           = { :git => 'https://github.com/SedraPay/Abyan-T-iOS.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/SedraPay/AbyanCheck.git', :tag => s.version.to_s }
 #s.source_files     = 'Abyan/Classes/**/*.{h,m,swift}'
 s.swift_version      = "5.3"
 s.ios.deployment_target = '11.0'
