@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/SedraPay/AbyanCheck/blob/main/AbyanCheck.png" alt="Icon"/>
 </p>
-<H1 align="center">SedraCheck</H1>
+<H1 align="center">AbyanCheck</H1>
 
 The new eKYC in simple way.
 
