@@ -94,7 +94,7 @@ func closeJourny(){
 }
 
 extension <YOUR_VIEW_CONTROLLER>: AbyanJourneyDelegate{
-    func didFinishCreatingJourneyWithError(error: SedraCheckError){
+    func didFinishCreatingJourneyWithError(error: AbyanCheckError){
         //do your own code as:
         //dismiss dialogs, loadings
         //recall the function
@@ -102,7 +102,7 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanJourneyDelegate{
     func didFinishCloseJourneyWithSuccess(){
 
     }
-    func didFinishCloseJourneyWithError(error: SedraCheckError){
+    func didFinishCloseJourneyWithError(error: AbyanCheckError){
         //do your own code as:
         //dismiss dialogs, loadings
         //recall the function
@@ -140,7 +140,7 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanDocumentsDelegate{
     func userDidCloseCamera(){
     
     }
-    func userFinishCapturingDocument(documents: [SedraCheckDocument]){
+    func userFinishCapturingDocument(documents: [AbyanDocument]){
     
     }
     func userFinishCapturingDocumentsWithResponse(documents: [AbyanDocument], response: AbyanDocumentVerificationResponse){
@@ -311,7 +311,7 @@ If you need to check user liveness and take a selfie, use below code:
 
 }
 
-extension <YOUR_VIEW_CONTROLLER>: SedraCheckLivenessCheckDelegate{
+extension <YOUR_VIEW_CONTROLLER>: AbyanCheckLivenessCheckDelegate{
     func didPressCancel(){
     
     }
@@ -324,7 +324,7 @@ extension <YOUR_VIEW_CONTROLLER>: SedraCheckLivenessCheckDelegate{
     func didGetError(errorMessage: String){
     
     }
-    func LivenessCheckPageError(error: SedraCheckError){
+    func LivenessCheckPageError(error: AbyanCheckError){
         
     }
 }
@@ -339,7 +339,7 @@ extension <YOUR_VIEW_CONTROLLER>: SedraCheckLivenessCheckDelegate{
 
 //put this code when you need to check your user in the world check.
 @objc func myButtonAction(_ sender: UIButton){
-    SedraCheck.comply.delegate = self
+    AbyanCheck.comply.delegate = self
 
     /// Below function is for screening and checking the customer.
     /// - Parameters:
