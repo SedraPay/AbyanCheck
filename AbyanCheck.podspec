@@ -9,10 +9,10 @@
 
 Pod::Spec.new do |s|
  s.name             = 'AbyanCheck'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
 s.summary          = 'Find the liveness of your app user and to check if the ID image is similar to the photo of the user, extract info from ID and passport.'
 
-s.homepage         = 'https://github.com/SedraPay/Abyan-T-iOS'
+s.homepage         = 'https://github.com/SedraPay/AbyanCheck'
 
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 
