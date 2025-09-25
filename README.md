@@ -11,7 +11,7 @@ Abyan is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod ''Abyan-T-iOS''
+pod 'AbyanCheck'
 
 #also add this
 post_install do |installer_representation|
