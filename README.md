@@ -116,11 +116,11 @@ If set to false → OCR will be applied only if the form itself supports OCR, ot
 ```
 ###### END OF CREATE JOURNEY ######
 
-```
+
 ###### Abyan Products Flow ######
 
 You can use the Products API to retrieve available products, get their form info, and continue the flow based on whether OCR is required or not.
-
+```swift
 override func viewDidLoad(){
     super.viewDidLoad()
     Abyan.product.delegate = self
@@ -177,7 +177,7 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanProductsDelegate {
         Abyan.kyc.getKYCFields(fieldValues:  [formDataValueFields] = [] ,productId: self.selectedProduct ?? 0)
     }
 }
-
+```
 
 Explanation:
 
@@ -191,7 +191,7 @@ If form info is empty → SDK falls back to requesting KYC fields.
 ###### Abyan KYC  ######
 
 To handle the KYC flow, you need to conform to the AbyanKYCDelegate protocol.
-
+```swift
 extension <YOUR_VIEW_CONTROLLER>: AbyanKYCDelegate {
 
     // Called when updating KYC fails
@@ -233,13 +233,13 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanKYCDelegate {
         // Now `array` contains all dynamic fields to display in your UI.
     }
 }
-
+```
 ###### Abyan Dynamic Fields ######
 
 Both FormInfofields(fields: [IntegrationInfo]) and kycFields(fields: [AbyanKYCFieldItem]) can return dynamic fields.
 
 The possible field types are:
-
+```swift
  AbyanKYCFieldType {
     case textField = 1          // Simple text input
     case dropdown = 2           // Select from multiple options
@@ -262,7 +262,7 @@ The possible field types are:
     case countryandcity = 19    // Country and city combined
 }
 
-
+```
 
 ###### Abyan Check ######
 
