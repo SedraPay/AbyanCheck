@@ -84,25 +84,9 @@ override func viewDidLoad(){
     Abyan.shared.setSettings(serverKey: "<YOUR_SERVER_KEY>", serverURLString: "<YOUR_GIVEN_SERVER>", true, .update) 
 }
 
-func closeJourny(){
-     //assign the delegate to your viewController
-    Abyan.shared.delegate = self
-    /// - Parameters:
-    ///  - customerId: this parameter to know your user id so you can compare it from our portal if needed
-    Abyan.shared.closeJourney(customerId: "<YOUR_CORE_SYSTEM_USERID>")
-
-}
 
 extension <YOUR_VIEW_CONTROLLER>: AbyanJourneyDelegate{
     func didFinishCreatingJourneyWithError(error: AbyanCheckError){
-        //do your own code as:
-        //dismiss dialogs, loadings
-        //recall the function
-    }
-    func didFinishCloseJourneyWithSuccess(){
-
-    }
-    func didFinishCloseJourneyWithError(error: AbyanCheckError){
         //do your own code as:
         //dismiss dialogs, loadings
         //recall the function
@@ -114,8 +98,170 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanJourneyDelegate{
         //save the journey if needed as a reference to your server to check user from our protal
     }
 }
+
+
+Enable / Disable OCR
+
+You can enable or disable the OCR feature for all forms.
+
+@IBAction func enableOCRSwitchAction(_ sender: UISwitch) {
+    sender.isOn ?
+      Abyan.shared.setOCREnabled(true) :
+      Abyan.shared.setOCREnabled(false)
+}
+
+If set to true → OCR will be enabled and applied on all forms.
+If set to false → OCR will be applied only if the form itself supports OCR, otherwise it will be skipped.
+
 ```
 ###### END OF CREATE JOURNEY ######
+
+
+###### Abyan Products Flow ######
+
+You can use the Products API to retrieve available products, get their form info, and continue the flow based on whether OCR is required or not.
+
+override func viewDidLoad(){
+    super.viewDidLoad()
+    Abyan.product.delegate = self
+    Abyan.product.getProducts()
+}
+
+@IBAction func nextButton(_ sender: UIButton) {
+    Dialogs.showLoading()
+    Abyan.product.getFormInfo(productID: self.selectedProduct ?? 0)
+}
+
+
+extension <YOUR_VIEW_CONTROLLER>: AbyanProductsDelegate {
+    
+    // Called when products request returns with error
+    func productsFinishedWithError(error: AbyanError) {
+         //do your own code as:
+         //dismiss dialogs, loadings
+         //recall the function
+    }
+    }
+    
+    // Called when products request returns successfully
+    func products(products: ProductsResponse) {
+          //do your own code as:
+         //dismiss dialogs, loadings
+        // handle products response (e.g., show in a list or picker)
+    }
+    
+    // Called when form info fields are received for the selected product
+    
+  func FormInfofields(fields: [IntegrationInfo]) {
+    Dialogs.dismiss()
+    
+    /// Note:
+    /// - The `fields` array contains the form fields for the selected product.
+    /// - If `fields` is empty → call `getKYCFields(fieldValues:productId:)` directly
+    ///   and send an empty array (`formDataValueFields`) to continue the flow.
+    /// - If `fields` is not empty → it may contain dynamic fields that you must fill
+    ///   because these dynamic fields need to be sent later when calling the next KYC step.
+    
+    if Abyan.shared.isOCREnabled == true {
+        // OCR is globally forced → always run OCR flow
+    } else {
+        // OCR depends on form content
+    }
+}
+
+    // Called when form info is empty → fallback to KYC flow
+    func EmptyFormInfofields() {
+        Dialogs.dismiss()
+        Abyan.kyc.delegate = self
+        Dialogs.showLoading()
+        Abyan.kyc.getKYCFields(fieldValues:  [formDataValueFields] = [] ,productId: self.selectedProduct ?? 0)
+    }
+}
+
+
+Explanation:
+
+getProducts() → fetch all available products.
+getFormInfo(productID:) → fetch form fields of the selected product.
+If OCR is enabled globally → SDK forces OCR in the flow.
+If OCR is disabled globally → SDK checks the form; if it contains OCR, it runs OCR, otherwise manual flow.
+If form info is empty → SDK falls back to requesting KYC fields.
+
+
+###### Abyan KYC  ######
+
+To handle the KYC flow, you need to conform to the AbyanKYCDelegate protocol.
+
+extension <YOUR_VIEW_CONTROLLER>: AbyanKYCDelegate {
+
+    // Called when updating KYC fails
+    func updateKYCFinishedWithError(error: String) {
+          //do your own code as:
+         //dismiss dialogs, loadings
+         //recall the function
+    }
+    
+    // Called when updating KYC succeeds
+    func didUpdateKYCSuccessfully(id: Int?) {
+         //do your own code as:
+         //dismiss dialogs, loadings
+         //recall the function
+    }
+    
+    // Called when KYC request fails
+    func kycFinishedWithError(error: AbyanError) {
+        Dialogs.dismiss()
+        Dialogs.showError(error.localizedDescription)
+    }
+    
+    // Called when KYC dynamic fields are returned
+    func kycFields(fields: [AbyanKYCFieldItem]) {
+        Dialogs.dismiss()
+        
+        /// This will return all dynamic fields from the SDK.
+        /// You can use them to render your own KYC form dynamically.
+        var array: [AbyanKYCDynamicField] = []
+        
+        for item in fields {
+            if let items = item.dynamicFields {
+                for object in items {
+                    array.append(object)
+                }
+            }
+        }
+        
+        // Now `array` contains all dynamic fields to display in your UI.
+    }
+}
+
+###### Abyan Dynamic Fields ######
+
+Both FormInfofields(fields: [IntegrationInfo]) and kycFields(fields: [AbyanKYCFieldItem]) can return dynamic fields.
+
+The possible field types are:
+
+ AbyanKYCFieldType {
+    case textField = 1          // Simple text input
+    case dropdown = 2           // Select from multiple options
+    case checkbox = 3           // Tick multiple options
+    case radioButton = 4        // Select one option
+    case dateTime = 5           // Pick a date or time
+    case boolean = 6            // True/False toggle
+    case file = 7               // Upload file
+    case image = 8              // Upload image
+    case country = 9            // Country picker
+    case city = 10              // City picker
+    case table = 11             // Table input
+    case textArea = 12          // Multi-line text
+    case email = 13             // Email input
+    case mobile = 14            // Phone number input
+    case number = 15            // Numeric input
+    case address = 16           // Address input
+    case textEditor = 17        // Rich text editor
+    case yesNo = 18             // Yes/No option
+    case countryandcity = 19    // Country and city combined
+}
+
 
 
 ###### Abyan Check ######
@@ -151,6 +297,9 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanDocumentsDelegate{
     }
     func didFinishWithError(error: AbyanError){
 
+    }
+    func userFinishCapturingDocumentsWithError(documents: [AbyanDocument]) {
+        
     }
 }
 ```
@@ -327,6 +476,13 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanCheckLivenessCheckDelegate{
     func LivenessCheckPageError(error: AbyanCheckError){
         
     }
+    func LivenessCheckDone(){
+    
+    }
+    func cameraAccessDeniedError(error: AbyanError){
+    
+    }
+    
 }
 ```
 ###### END OF SEDRA LIVENESS CHECK ######
