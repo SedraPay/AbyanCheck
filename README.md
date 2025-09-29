@@ -522,6 +522,27 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanComplyDelegate{
 ```
 ###### END OF APYAN COMPLY ######
 
+###### Close Journey ######
+
+```swift
+extension <YOUR_VIEW_CONTROLLER>:  AbyanCloseJourneyDelegate {
+  override func viewDidLoad(){
+    super.viewDidLoad()
+    Abyan.closeJourney.delegate = self
+    Abyan.closeJourney.closeJourneyAPI(customerId: "unique-customer-id")
+  }
+  func didFinishCloseJourneyWithSuccess() { 
+        //do your own code as:
+        //dismiss dialogs, loadings
+        //recall the function
+  }
+  func didFinishCloseJourneyWithError(error: AbyanError) { 
+         //do your own code as:
+         //dismiss dialogs, loadings
+         //recall the function
+}
+}
+```
 
 Localization
 ==========================
