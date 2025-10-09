@@ -2401,6 +2401,266 @@
         "moduleName": "Abyan"
       },
       {
+        "kind": "TypeDecl",
+        "name": "AbyanCountriesDelegate",
+        "printedName": "AbyanCountriesDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didGetNationalitiesWithSuccess",
+            "printedName": "didGetNationalitiesWithSuccess(response:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CountriesAndCitiesResponse",
+                "printedName": "Abyan.CountriesAndCitiesResponse",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5Abyan0A17CountriesDelegateP30didGetNationalitiesWithSuccess8responseyAA0B17AndCitiesResponseV_tF",
+            "mangledName": "$s5Abyan0A17CountriesDelegateP30didGetNationalitiesWithSuccess8responseyAA0B17AndCitiesResponseV_tF",
+            "moduleName": "Abyan",
+            "genericSig": "<τ_0_0 where τ_0_0 : Abyan.AbyanCountriesDelegate>",
+            "sugared_genericSig": "<Self where Self : Abyan.AbyanCountriesDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didGetNationalitiesWithError",
+            "printedName": "didGetNationalitiesWithError(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AbyanError",
+                "printedName": "Abyan.AbyanError",
+                "usr": "s:5Abyan0A5ErrorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5Abyan0A17CountriesDelegateP28didGetNationalitiesWithError5erroryAA0aH0V_tF",
+            "mangledName": "$s5Abyan0A17CountriesDelegateP28didGetNationalitiesWithError5erroryAA0aH0V_tF",
+            "moduleName": "Abyan",
+            "genericSig": "<τ_0_0 where τ_0_0 : Abyan.AbyanCountriesDelegate>",
+            "sugared_genericSig": "<Self where Self : Abyan.AbyanCountriesDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:5Abyan0A17CountriesDelegateP",
+        "mangledName": "$s5Abyan0A17CountriesDelegateP",
+        "moduleName": "Abyan",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AbyanCountries",
+        "printedName": "AbyanCountries",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Abyan.AbyanCountriesDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AbyanCountriesDelegate",
+                    "printedName": "any Abyan.AbyanCountriesDelegate",
+                    "usr": "s:5Abyan0A17CountriesDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvp",
+            "mangledName": "$s5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Abyan.AbyanCountriesDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AbyanCountriesDelegate",
+                        "printedName": "any Abyan.AbyanCountriesDelegate",
+                        "usr": "s:5Abyan0A17CountriesDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvg",
+                "mangledName": "$s5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Abyan.AbyanCountriesDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AbyanCountriesDelegate",
+                        "printedName": "any Abyan.AbyanCountriesDelegate",
+                        "usr": "s:5Abyan0A17CountriesDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvs",
+                "mangledName": "$s5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvM",
+                "mangledName": "$s5Abyan0A9CountriesC8delegateAA0aB8Delegate_pSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getNationalities",
+            "printedName": "getNationalities()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5Abyan0A9CountriesC16getNationalitiesyyF",
+            "mangledName": "$s5Abyan0A9CountriesC16getNationalitiesyyF",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:5Abyan0A9CountriesC",
+        "mangledName": "$s5Abyan0A9CountriesC",
+        "moduleName": "Abyan",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -26103,6 +26363,2100 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "CountriesAndCitiesResponse",
+        "printedName": "CountriesAndCitiesResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "countries",
+            "printedName": "countries",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Abyan.Country]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Abyan.Country]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Country",
+                        "printedName": "Abyan.Country",
+                        "usr": "s:5Abyan7CountryV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvp",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Abyan.Country]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Abyan.Country]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Country",
+                            "printedName": "Abyan.Country",
+                            "usr": "s:5Abyan7CountryV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvg",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Abyan.Country]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Abyan.Country]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Country",
+                            "printedName": "Abyan.Country",
+                            "usr": "s:5Abyan7CountryV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvs",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvM",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9countriesSayAA7CountryVGSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "targetUrl",
+            "printedName": "targetUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvp",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvg",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvs",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvM",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV9targetUrlSSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV7successSbSgvp",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV7successSbSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV7successSbSgvg",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV7successSbSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV7successSbSgvs",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV7successSbSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV7successSbSgvM",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV7successSbSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV5errorSSSgvp",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV5errorSSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV5errorSSSgvg",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV5errorSSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV5errorSSSgvs",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV5errorSSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV5errorSSSgvM",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV5errorSSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unAuthorizedRequest",
+            "printedName": "unAuthorizedRequest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvp",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvg",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvs",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvM",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV19unAuthorizedRequestSbSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "abp",
+            "printedName": "abp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV3abpSbSgvp",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV3abpSbSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV3abpSbSgvg",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV3abpSbSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV3abpSbSgvs",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV3abpSbSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV3abpSbSgvM",
+                "mangledName": "$s5Abyan26CountriesAndCitiesResponseV3abpSbSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CountriesAndCitiesResponse",
+                "printedName": "Abyan.CountriesAndCitiesResponse",
+                "usr": "s:5Abyan26CountriesAndCitiesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Abyan",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5Abyan26CountriesAndCitiesResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s5Abyan26CountriesAndCitiesResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Abyan",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:5Abyan26CountriesAndCitiesResponseV",
+        "mangledName": "$s5Abyan26CountriesAndCitiesResponseV",
+        "moduleName": "Abyan",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Country",
+        "printedName": "Country",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV2idSiSgvp",
+            "mangledName": "$s5Abyan7CountryV2idSiSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV2idSiSgvg",
+                "mangledName": "$s5Abyan7CountryV2idSiSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV2idSiSgvs",
+                "mangledName": "$s5Abyan7CountryV2idSiSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV2idSiSgvM",
+                "mangledName": "$s5Abyan7CountryV2idSiSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iso",
+            "printedName": "iso",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV3isoSSSgvp",
+            "mangledName": "$s5Abyan7CountryV3isoSSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV3isoSSSgvg",
+                "mangledName": "$s5Abyan7CountryV3isoSSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV3isoSSSgvs",
+                "mangledName": "$s5Abyan7CountryV3isoSSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV3isoSSSgvM",
+                "mangledName": "$s5Abyan7CountryV3isoSSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isO3",
+            "printedName": "isO3",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV4isO3SSSgvp",
+            "mangledName": "$s5Abyan7CountryV4isO3SSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV4isO3SSSgvg",
+                "mangledName": "$s5Abyan7CountryV4isO3SSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV4isO3SSSgvs",
+                "mangledName": "$s5Abyan7CountryV4isO3SSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV4isO3SSSgvM",
+                "mangledName": "$s5Abyan7CountryV4isO3SSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isoNumaric",
+            "printedName": "isoNumaric",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV10isoNumaricSiSgvp",
+            "mangledName": "$s5Abyan7CountryV10isoNumaricSiSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV10isoNumaricSiSgvg",
+                "mangledName": "$s5Abyan7CountryV10isoNumaricSiSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV10isoNumaricSiSgvs",
+                "mangledName": "$s5Abyan7CountryV10isoNumaricSiSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV10isoNumaricSiSgvM",
+                "mangledName": "$s5Abyan7CountryV10isoNumaricSiSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV4nameSSSgvp",
+            "mangledName": "$s5Abyan7CountryV4nameSSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV4nameSSSgvg",
+                "mangledName": "$s5Abyan7CountryV4nameSSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV4nameSSSgvs",
+                "mangledName": "$s5Abyan7CountryV4nameSSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV4nameSSSgvM",
+                "mangledName": "$s5Abyan7CountryV4nameSSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "phoneCode",
+            "printedName": "phoneCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV9phoneCodeSSSgvp",
+            "mangledName": "$s5Abyan7CountryV9phoneCodeSSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV9phoneCodeSSSgvg",
+                "mangledName": "$s5Abyan7CountryV9phoneCodeSSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV9phoneCodeSSSgvs",
+                "mangledName": "$s5Abyan7CountryV9phoneCodeSSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV9phoneCodeSSSgvM",
+                "mangledName": "$s5Abyan7CountryV9phoneCodeSSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cities",
+            "printedName": "cities",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Abyan.City]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Abyan.City]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "City",
+                        "printedName": "Abyan.City",
+                        "usr": "s:5Abyan4CityV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan7CountryV6citiesSayAA4CityVGSgvp",
+            "mangledName": "$s5Abyan7CountryV6citiesSayAA4CityVGSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Abyan.City]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Abyan.City]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "City",
+                            "printedName": "Abyan.City",
+                            "usr": "s:5Abyan4CityV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV6citiesSayAA4CityVGSgvg",
+                "mangledName": "$s5Abyan7CountryV6citiesSayAA4CityVGSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Abyan.City]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Abyan.City]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "City",
+                            "printedName": "Abyan.City",
+                            "usr": "s:5Abyan4CityV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV6citiesSayAA4CityVGSgvs",
+                "mangledName": "$s5Abyan7CountryV6citiesSayAA4CityVGSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan7CountryV6citiesSayAA4CityVGSgvM",
+                "mangledName": "$s5Abyan7CountryV6citiesSayAA4CityVGSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Country",
+                "printedName": "Abyan.Country",
+                "usr": "s:5Abyan7CountryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:5Abyan7CountryV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s5Abyan7CountryV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Abyan",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5Abyan7CountryV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s5Abyan7CountryV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Abyan",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:5Abyan7CountryV",
+        "mangledName": "$s5Abyan7CountryV",
+        "moduleName": "Abyan",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "City",
+        "printedName": "City",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan4CityV2idSiSgvp",
+            "mangledName": "$s5Abyan4CityV2idSiSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV2idSiSgvg",
+                "mangledName": "$s5Abyan4CityV2idSiSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV2idSiSgvs",
+                "mangledName": "$s5Abyan4CityV2idSiSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV2idSiSgvM",
+                "mangledName": "$s5Abyan4CityV2idSiSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan4CityV4nameSSSgvp",
+            "mangledName": "$s5Abyan4CityV4nameSSSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV4nameSSSgvg",
+                "mangledName": "$s5Abyan4CityV4nameSSSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV4nameSSSgvs",
+                "mangledName": "$s5Abyan4CityV4nameSSSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV4nameSSSgvM",
+                "mangledName": "$s5Abyan4CityV4nameSSSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "countryId",
+            "printedName": "countryId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5Abyan4CityV9countryIdSiSgvp",
+            "mangledName": "$s5Abyan4CityV9countryIdSiSgvp",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV9countryIdSiSgvg",
+                "mangledName": "$s5Abyan4CityV9countryIdSiSgvg",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV9countryIdSiSgvs",
+                "mangledName": "$s5Abyan4CityV9countryIdSiSgvs",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5Abyan4CityV9countryIdSiSgvM",
+                "mangledName": "$s5Abyan4CityV9countryIdSiSgvM",
+                "moduleName": "Abyan",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "City",
+                "printedName": "Abyan.City",
+                "usr": "s:5Abyan4CityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:5Abyan4CityV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s5Abyan4CityV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Abyan",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5Abyan4CityV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s5Abyan4CityV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Abyan",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:5Abyan4CityV",
+        "mangledName": "$s5Abyan4CityV",
+        "moduleName": "Abyan",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ProductsResponseElement",
         "printedName": "ProductsResponseElement",
         "children": [
@@ -26609,117 +28963,6 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "didGetNationalitiesWithSuccess",
-            "printedName": "didGetNationalitiesWithSuccess(response:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "GetNationalities",
-                "printedName": "Abyan.GetNationalities",
-                "usr": "s:5Abyan16GetNationalitiesV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5Abyan0A15JourneyDelegateP30didGetNationalitiesWithSuccess8responseyAA0eF0V_tF",
-            "mangledName": "$s5Abyan0A15JourneyDelegateP30didGetNationalitiesWithSuccess8responseyAA0eF0V_tF",
-            "moduleName": "Abyan",
-            "genericSig": "<τ_0_0 where τ_0_0 : Abyan.AbyanJourneyDelegate>",
-            "sugared_genericSig": "<Self where Self : Abyan.AbyanJourneyDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "didGetNationalitiesWithError",
-            "printedName": "didGetNationalitiesWithError(error:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AbyanError",
-                "printedName": "Abyan.AbyanError",
-                "usr": "s:5Abyan0A5ErrorV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5Abyan0A15JourneyDelegateP28didGetNationalitiesWithError5erroryAA0aH0V_tF",
-            "mangledName": "$s5Abyan0A15JourneyDelegateP28didGetNationalitiesWithError5erroryAA0aH0V_tF",
-            "moduleName": "Abyan",
-            "genericSig": "<τ_0_0 where τ_0_0 : Abyan.AbyanJourneyDelegate>",
-            "sugared_genericSig": "<Self where Self : Abyan.AbyanJourneyDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "didGetCSPDInfoWithSuccess",
-            "printedName": "didGetCSPDInfoWithSuccess(response:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "GetCSPDInfoResponse",
-                "printedName": "Abyan.GetCSPDInfoResponse",
-                "usr": "s:5Abyan19GetCSPDInfoResponseV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5Abyan0A15JourneyDelegateP25didGetCSPDInfoWithSuccess8responseyAA0eF8ResponseV_tF",
-            "mangledName": "$s5Abyan0A15JourneyDelegateP25didGetCSPDInfoWithSuccess8responseyAA0eF8ResponseV_tF",
-            "moduleName": "Abyan",
-            "genericSig": "<τ_0_0 where τ_0_0 : Abyan.AbyanJourneyDelegate>",
-            "sugared_genericSig": "<Self where Self : Abyan.AbyanJourneyDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "didGetCSPDInfoWithError",
-            "printedName": "didGetCSPDInfoWithError(error:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AbyanError",
-                "printedName": "Abyan.AbyanError",
-                "usr": "s:5Abyan0A5ErrorV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5Abyan0A15JourneyDelegateP23didGetCSPDInfoWithError5erroryAA0aH0V_tF",
-            "mangledName": "$s5Abyan0A15JourneyDelegateP23didGetCSPDInfoWithError5erroryAA0aH0V_tF",
-            "moduleName": "Abyan",
-            "genericSig": "<τ_0_0 where τ_0_0 : Abyan.AbyanJourneyDelegate>",
-            "sugared_genericSig": "<Self where Self : Abyan.AbyanJourneyDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -27152,6 +29395,57 @@
                 "declKind": "Accessor",
                 "usr": "s:5AbyanAAC6nafathAA0A6NafathCvgZ",
                 "mangledName": "$s5AbyanAAC6nafathAA0A6NafathCvgZ",
+                "moduleName": "Abyan",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "countries",
+            "printedName": "countries",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AbyanCountries",
+                "printedName": "Abyan.AbyanCountries",
+                "usr": "s:5Abyan0A9CountriesC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5AbyanAAC9countriesAA0A9CountriesCvpZ",
+            "mangledName": "$s5AbyanAAC9countriesAA0A9CountriesCvpZ",
+            "moduleName": "Abyan",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AbyanCountries",
+                    "printedName": "Abyan.AbyanCountries",
+                    "usr": "s:5Abyan0A9CountriesC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5AbyanAAC9countriesAA0A9CountriesCvgZ",
+                "mangledName": "$s5AbyanAAC9countriesAA0A9CountriesCvgZ",
                 "moduleName": "Abyan",
                 "static": true,
                 "implicit": true,
@@ -28110,28 +30404,6 @@
               "AccessControl"
             ],
             "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getNationalities",
-            "printedName": "getNationalities()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5AbyanAAC16getNationalitiesyyF",
-            "mangledName": "$s5AbyanAAC16getNationalitiesyyF",
-            "moduleName": "Abyan",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
             "funcSelfKind": "NonMutating"
           },
           {
@@ -37920,6 +40192,72 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(key:value:isSelected:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AbyanKYCDynamicFieldEnumeratedValue",
+                "printedName": "Abyan.AbyanKYCDynamicFieldEnumeratedValue",
+                "usr": "s:5Abyan0A30KYCDynamicFieldEnumeratedValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:5Abyan0A30KYCDynamicFieldEnumeratedValueV3key5value10isSelectedACSSSg_AGSbSgtcfc",
+            "mangledName": "$s5Abyan0A30KYCDynamicFieldEnumeratedValueV3key5value10isSelectedACSSSg_AGSbSgtcfc",
+            "moduleName": "Abyan",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
@@ -44069,7 +46407,7 @@
           {
             "kind": "Function",
             "name": "getFormInfo",
-            "printedName": "getFormInfo(productID:)",
+            "printedName": "getFormInfo(productID:isOcrEnabled:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -44081,11 +46419,26 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:5Abyan0A8ProductsC11getFormInfo9productIDySi_tF",
-            "mangledName": "$s5Abyan0A8ProductsC11getFormInfo9productIDySi_tF",
+            "usr": "s:5Abyan0A8ProductsC11getFormInfo9productID12isOcrEnabledySi_SbSgtF",
+            "mangledName": "$s5Abyan0A8ProductsC11getFormInfo9productID12isOcrEnabledySi_SbSgtF",
             "moduleName": "Abyan",
             "declAttributes": [
               "Final",
@@ -47225,18 +49578,12 @@
           {
             "kind": "Function",
             "name": "captureDocuments",
-            "printedName": "captureDocuments(nationality:documentType:configuration:)",
+            "printedName": "captureDocuments(documentType:configuration:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Nationality",
-                "printedName": "Abyan.Nationality",
-                "usr": "s:5Abyan11NationalityV"
               },
               {
                 "kind": "TypeNominal",
@@ -47260,8 +49607,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5Abyan0A9DocumentsC07captureB011nationality12documentType13configurationyAA11NationalityV_AA0H6IDTypeVAA013ConfigureScanB5ViewsVSgtF",
-            "mangledName": "$s5Abyan0A9DocumentsC07captureB011nationality12documentType13configurationyAA11NationalityV_AA0H6IDTypeVAA013ConfigureScanB5ViewsVSgtF",
+            "usr": "s:5Abyan0A9DocumentsC07captureB012documentType13configurationyAA17NationalityIDTypeV_AA013ConfigureScanB5ViewsVSgtF",
+            "mangledName": "$s5Abyan0A9DocumentsC07captureB012documentType13configurationyAA17NationalityIDTypeV_AA013ConfigureScanB5ViewsVSgtF",
             "moduleName": "Abyan",
             "declAttributes": [
               "Final",
@@ -47672,6 +50019,13 @@
       "offset": 935,
       "length": 7,
       "value": "\"TRACE\""
+    },
+    {
+      "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Network\/APIs\/AbyanAPI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2569,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/ConfigureSedraCheck.swift",
@@ -48705,37 +51059,51 @@
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
       "kind": "StringLiteral",
-      "offset": 551,
+      "offset": 555,
       "length": 15,
       "value": "\"nationalityId\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 632,
       "length": 20,
       "value": "\"nationalityIdTypes\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
       "kind": "StringLiteral",
-      "offset": 1247,
+      "offset": 1254,
       "length": 8,
       "value": "\"typeId\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
       "kind": "StringLiteral",
-      "offset": 1661,
+      "offset": 1671,
       "length": 9,
       "value": "\"ID Card\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
       "kind": "StringLiteral",
-      "offset": 1692,
+      "offset": 1701,
       "length": 10,
       "value": "\"Passport\""
+    },
+    {
+      "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
+      "kind": "StringLiteral",
+      "offset": 2298,
+      "length": 8,
+      "value": "\"result\""
+    },
+    {
+      "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/GetNationalities.swift",
+      "kind": "StringLiteral",
+      "offset": 2422,
+      "length": 7,
+      "value": "\"__abp\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
@@ -48754,49 +51122,49 @@
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "StringLiteral",
-      "offset": 1364,
+      "offset": 1068,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "StringLiteral",
-      "offset": 1402,
+      "offset": 1106,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "BooleanLiteral",
-      "offset": 1437,
+      "offset": 1141,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "BooleanLiteral",
-      "offset": 1651,
+      "offset": 1355,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "IntegerLiteral",
-      "offset": 1807,
+      "offset": 1511,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "BooleanLiteral",
-      "offset": 1846,
+      "offset": 1550,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/Abyan.swift",
       "kind": "BooleanLiteral",
-      "offset": 2025,
+      "offset": 1729,
       "length": 5,
       "value": "false"
     },
@@ -49111,147 +51479,147 @@
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2451,
+      "offset": 2651,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2473,
+      "offset": 2673,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2495,
+      "offset": 2695,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2520,
+      "offset": 2720,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2542,
+      "offset": 2742,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2563,
+      "offset": 2763,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2581,
+      "offset": 2781,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2600,
+      "offset": 2800,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2621,
+      "offset": 2821,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2639,
+      "offset": 2839,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2659,
+      "offset": 2859,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2682,
+      "offset": 2882,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2702,
+      "offset": 2902,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2723,
+      "offset": 2923,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2744,
+      "offset": 2944,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2766,
+      "offset": 2966,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2791,
+      "offset": 2991,
       "length": 2,
       "value": "17"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2811,
+      "offset": 3011,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2840,
+      "offset": 3040,
       "length": 2,
       "value": "19"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2910,
+      "offset": 3110,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Models\/AbyanKYCFieldModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2933,
+      "offset": 3133,
       "length": 1,
       "value": "2"
     },
@@ -50939,6 +53307,13 @@
       "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/ViewControllers\/LivenessCheckViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 4447,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amani\/Documents\/abyan-check-ios\/Abyan\/Abyan\/AbyanProducts.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1452,
       "length": 5,
       "value": "false"
     },

@@ -129,7 +129,7 @@ override func viewDidLoad(){
 
 @IBAction func nextButton(_ sender: UIButton) {
     Dialogs.showLoading()
-    Abyan.product.getFormInfo(productID: self.selectedProduct ?? 0)
+    Abyan.product.getFormInfo(productID: self.selectedProduct ?? 0,isOcrEnabled: Abyan.shared.isOCREnabled)
 }
 
 
@@ -234,6 +234,29 @@ extension <YOUR_VIEW_CONTROLLER>: AbyanKYCDelegate {
     }
 }
 ```
+#### Countries and Cities
+
+Call this method only once and cache the response (countries and cities) locally.
+This data will be used later in the KYC screen to handle data types like country and countryCity.
+
+```swift
+extension <YOUR_VIEW_CONTROLLER>: AbyanCountriesDelegate {
+
+  func loadCountries() {
+    Abyan.countries.delegate = self
+    Abyan.countries.getNationalities()
+  }
+
+  func didGetNationalitiesWithSuccess(response: CountriesAndCitiesResponse) {
+    // use response (countries, cities)
+  }
+
+  func didGetNationalitiesWithError(error: AbyanError) {
+    // handle error
+  }
+}
+```
+
 ###### Abyan Dynamic Fields ######
 
 Both FormInfofields(fields: [IntegrationInfo]) and kycFields(fields: [AbyanKYCFieldItem]) can return dynamic fields.

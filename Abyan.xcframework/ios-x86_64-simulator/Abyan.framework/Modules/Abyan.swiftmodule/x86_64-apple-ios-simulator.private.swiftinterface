@@ -60,6 +60,15 @@ public struct ImageMatchingResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public protocol AbyanCountriesDelegate : ObjectiveC.NSObjectProtocol {
+  func didGetNationalitiesWithSuccess(response: CountriesAndCitiesResponse)
+  func didGetNationalitiesWithError(error: AbyanError)
+}
+@_hasMissingDesignatedInitializers final public class AbyanCountries {
+  final public var delegate: (any AbyanCountriesDelegate)?
+  final public func getNationalities()
+  @objc deinit
+}
 public struct AbyanDocument {
   public var image: UIKit.UIImage?
   public var documentSide: DocumentSideEnum?
@@ -399,6 +408,34 @@ public enum NationalityIdTypeName : Swift.String, Swift.Codable {
     get
   }
 }
+public struct CountriesAndCitiesResponse : Swift.Codable {
+  public var countries: [Country]?
+  public var targetUrl: Swift.String?
+  public var success: Swift.Bool?
+  public var error: Swift.String?
+  public var unAuthorizedRequest: Swift.Bool?
+  public var abp: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Country : Swift.Codable {
+  public var id: Swift.Int?
+  public var iso: Swift.String?
+  public var isO3: Swift.String?
+  public var isoNumaric: Swift.Int?
+  public var name: Swift.String?
+  public var phoneCode: Swift.String?
+  public var cities: [City]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct City : Swift.Codable {
+  public var id: Swift.Int?
+  public var name: Swift.String?
+  public var countryId: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct ProductsResponseElement : Swift.Codable {
   public let name: Swift.String?
   public let id: Swift.Int?
@@ -418,10 +455,6 @@ public enum AbyanJourneyType : Swift.Int {
 public protocol AbyanJourneyDelegate : ObjectiveC.NSObjectProtocol {
   func didFinishCreatingJourneyWithError(error: AbyanError)
   func didFinishCreatingJourneyWithSuccess(journeyId: Swift.String)
-  func didGetNationalitiesWithSuccess(response: GetNationalities)
-  func didGetNationalitiesWithError(error: AbyanError)
-  func didGetCSPDInfoWithSuccess(response: GetCSPDInfoResponse)
-  func didGetCSPDInfoWithError(error: AbyanError)
 }
 @_hasMissingDesignatedInitializers final public class Abyan {
   public static let livenessCheck: AbyanLivenessCheck
@@ -432,6 +465,7 @@ public protocol AbyanJourneyDelegate : ObjectiveC.NSObjectProtocol {
   public static let kyc: AbyanKYC
   public static let product: AbyanProducts
   public static let nafath: AbyanNafath
+  public static let countries: AbyanCountries
   final public var delegate: (any AbyanJourneyDelegate)?
   final public var scannedDocuments: [AbyanDocument]?
   final public var livenessImage: UIKit.UIImage?
@@ -440,7 +474,6 @@ public protocol AbyanJourneyDelegate : ObjectiveC.NSObjectProtocol {
   final public var journeySession: Swift.String?
   final public var isOCREnabled: Swift.Bool
   final public func setSettings(serverKey: Swift.String, serverURLString: Swift.String?, _ needsLogging: Swift.Bool = false, _ journeyType: AbyanJourneyType = .new, referenceKey: Swift.String? = nil, customerId: Swift.String? = nil) throws
-  final public func getNationalities()
   final public func setOCREnabled(_ enabled: Swift.Bool)
   @objc deinit
 }
@@ -556,6 +589,7 @@ public struct AbyanKYCDynamicFieldEnumeratedValue : Swift.Codable {
   public var key: Swift.String?
   public var value: Swift.String?
   public var isSelected: Swift.Bool?
+  public init(key: Swift.String? = nil, value: Swift.String? = nil, isSelected: Swift.Bool? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -718,7 +752,7 @@ public protocol AbyanProductsDelegate {
 @_hasMissingDesignatedInitializers final public class AbyanProducts {
   final public var delegate: (any AbyanProductsDelegate)?
   final public func getProducts()
-  final public func getFormInfo(productID: Swift.Int)
+  final public func getFormInfo(productID: Swift.Int, isOcrEnabled: Swift.Bool? = false)
   @objc deinit
 }
 public protocol AbyanComplyDelegate {
@@ -796,7 +830,7 @@ public protocol AbyanDocumentsDelegate {
 }
 @_hasMissingDesignatedInitializers final public class AbyanDocuments {
   final public var delegate: (any AbyanDocumentsDelegate)?
-  final public func captureDocuments(nationality: Nationality, documentType: NationalityIDType, configuration: ConfigureScanDocumentsViews?)
+  final public func captureDocuments(documentType: NationalityIDType, configuration: ConfigureScanDocumentsViews?)
   final public func extractData()
   @objc deinit
 }
