@@ -464,7 +464,6 @@ public protocol AbyanJourneyDelegate : ObjectiveC.NSObjectProtocol {
   public static let closeJourney: AbyanCloseJourney
   public static let kyc: AbyanKYC
   public static let product: AbyanProducts
-  public static let nafath: AbyanNafath
   public static let countries: AbyanCountries
   final public var delegate: (any AbyanJourneyDelegate)?
   final public var scannedDocuments: [AbyanDocument]?
@@ -659,24 +658,6 @@ extension UIKit.UIImage {
   @_Concurrency.MainActor @preconcurrency public func maskToRoi(roi: UIKit.UIView)
   @objc deinit
 }
-public protocol AbyanNafathDelegate {
-  func nafathRandomNumberFinishedWithError(error: AbyanError)
-  func nafathRandomNumber(data: NafathRandomNumberResponse)
-  func resendNafathRandomNumber(randomNumber: Swift.String)
-  func resendNafathRandomNumberFinishedWithError(error: AbyanError)
-  func getNafathStatusSuccess(status: Swift.String)
-  func getNafathStatusFinishedWithError(error: AbyanError)
-  func nafathKYCFinishedWithError(error: AbyanError)
-  func nafathKYCSuccess()
-}
-@_hasMissingDesignatedInitializers final public class AbyanNafath {
-  final public var delegate: (any AbyanNafathDelegate)?
-  final public func getNafathRandomNumber()
-  final public func getNafathKYC(fieldValues: [formDataValueFields], productId: Swift.Int)
-  final public func resendNafathRandomNumber()
-  final public func getNafathStatus()
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class ScannerViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
@@ -686,13 +667,6 @@ public protocol AbyanNafathDelegate {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-}
-public struct NafathRandomNumberResponse : Swift.Codable {
-  public var randomNumber: Swift.String?, startTime: Swift.String?
-  public var isTimerEnd: Swift.Bool?
-  public init(randomNumber: Swift.String, startTime: Swift.String, isTimerEnd: Swift.Bool)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct AbyanDocumentVerificationResponse : Swift.Codable {
   public let extractedFields: [ExtractedField]?
