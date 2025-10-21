@@ -40,6 +40,10 @@ public struct IntegrationField : Swift.Codable {
   public var fieldName: Swift.String?, fieldNameAr: Swift.String?
   public var dateTypeEnum: AbyanDateFieldType?
   public var enumeratedValues: [EnumeratedValue]?
+  public var validationRegEx: Swift.String?
+  public var regExErrorMessage: Swift.String?
+  public var fieldMin: Swift.Int?
+  public var fieldMax: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -472,7 +476,7 @@ public protocol AbyanJourneyDelegate : ObjectiveC.NSObjectProtocol {
   final public var imagesIds: [ServerImageDocument]?
   final public var journeySession: Swift.String?
   final public var isOCREnabled: Swift.Bool
-  final public func setSettings(serverKey: Swift.String, serverURLString: Swift.String?, _ needsLogging: Swift.Bool = false, _ journeyType: AbyanJourneyType = .new, referenceKey: Swift.String? = nil, customerId: Swift.String? = nil) throws
+  final public func setSettings(serverKey: Swift.String, serverURLString: Swift.String?, _ needsLogging: Swift.Bool = false, _ journeyType: AbyanJourneyType = .new, referenceKey: Swift.String? = nil, customerId: Swift.String? = nil, applicationName: Swift.String) throws
   final public func setOCREnabled(_ enabled: Swift.Bool)
   @objc deinit
 }
